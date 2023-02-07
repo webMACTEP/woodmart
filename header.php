@@ -583,7 +583,7 @@
 		}
 	</style>
 
-	<link rel="stylesheet" href="/wp-content/themes/woodmart/css/mystyle.css?=18">
+	<link rel="stylesheet" href="/wp-content/themes/woodmart/css/mystyle.css?=19">
 </head>
 <?php
 
