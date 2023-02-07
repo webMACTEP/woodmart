@@ -78,7 +78,19 @@ if ($full_height_sidebar && $page_layout != 'full-width') {
 		</div>
 	</div>
 <?php endif ?>
+<?php if ((($product_design == 'default' && ($breadcrumbs_position == 'default' || empty($breadcrumbs_position))) || $breadcrumbs_position == 'summary') && (woodmart_get_opt('product_page_breadcrumbs', '1') || woodmart_get_opt('products_nav'))) : ?>
+	<div class="single-breadcrumbs-wrapper">
+		<div class="single-breadcrumbs">
+			<?php if (woodmart_get_opt('product_page_breadcrumbs', '1')) : ?>
+				<?php woodmart_current_breadcrumbs('shop'); ?>
+			<?php endif; ?>
 
+			<?php if (woodmart_get_opt('products_nav')) : ?>
+				<?php woodmart_products_nav(); ?>
+			<?php endif ?>
+		</div>
+	</div>
+<?php endif ?>
 <div class="container">
 	<?php
 	/**
@@ -113,7 +125,7 @@ if ($full_height_sidebar && $page_layout != 'full-width') {
 			<div class="product-image-summary <?php echo esc_attr($product_image_summary_class); ?>">
 				<div class="row product-image-summary-inner">
 					<div class="<?php //echo esc_attr($product_images_class); 
-								?> col-lg-7 col-12 col-md-6 product-images" <?php echo !empty($product_images_attr) ? $product_images_attr : ''; ?>>
+								?> col-lg-5 col-12 col-md-6 product-images" <?php echo !empty($product_images_attr) ? $product_images_attr : ''; ?>>
 						<div class="product-images-inner">
 							<?php
 							/**
@@ -130,21 +142,9 @@ if ($full_height_sidebar && $page_layout != 'full-width') {
 						<div class="vc_row-full-width"></div>
 					<?php endif ?>
 					<div class="<?php //echo esc_attr($product_summary_class); 
-								?> col-lg-5 col-12 col-md-6  summary entry-summary">
+								?> col-lg-7 col-12 col-md-6  summary entry-summary">
 						<div class="summary-inner">
-							<?php if ((($product_design == 'default' && ($breadcrumbs_position == 'default' || empty($breadcrumbs_position))) || $breadcrumbs_position == 'summary') && (woodmart_get_opt('product_page_breadcrumbs', '1') || woodmart_get_opt('products_nav'))) : ?>
-								<div class="single-breadcrumbs-wrapper">
-									<div class="single-breadcrumbs">
-										<?php if (woodmart_get_opt('product_page_breadcrumbs', '1')) : ?>
-											<?php woodmart_current_breadcrumbs('shop'); ?>
-										<?php endif; ?>
 
-										<?php if (woodmart_get_opt('products_nav')) : ?>
-											<?php woodmart_products_nav(); ?>
-										<?php endif ?>
-									</div>
-								</div>
-							<?php endif ?>
 
 							<?php
 							/**
@@ -160,7 +160,10 @@ if ($full_height_sidebar && $page_layout != 'full-width') {
 							 */
 							do_action('woocommerce_single_product_summary');
 							?>
-							<!-- <div class="quick-buy">Быстрый заказ</div> -->
+							<div class="rel">
+							<div class="quick-buy">Быстрый заказ</div> 
+							</div>
+							 
 						</div>
 						<div class="woocommerce-product-details">
 							<?php

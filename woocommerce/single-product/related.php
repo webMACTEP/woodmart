@@ -112,7 +112,7 @@ foreach ($sim_ids[$product_sex] as $sim_cat => $sim_id) {
 ?>
 
 <div id="similar-products" class="related-products">
-	<h3 class="title slider-title">С этим товаром покупали</h3>
+	<h3 class="title slider-title">С этим товаром покупают</h3>
 	<?php
 	woodmart_enqueue_inline_style('product-loop');
 	if (!isMobile()) {

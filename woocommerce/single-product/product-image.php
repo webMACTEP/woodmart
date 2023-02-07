@@ -83,7 +83,7 @@ wp_enqueue_script( 'imagesloaded' );
 
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?> images row align-items-start thumbs-position-<?php echo esc_attr( $thums_position ); ?> image-action-<?php echo esc_attr( $image_action ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<div class="<?php if ( $attachment_ids && $thums_position == 'left' && ! $is_quick_view ): ?>col-lg-9 order-lg-last<?php else: ?>col-12<?php endif ?>">
+	<div class="<?php if ( $attachment_ids && $thums_position == 'left' && ! $is_quick_view ): ?>col-lg-12 order-lg-last<?php else: ?>col-12<?php endif ?>">
 
 		<figure class="woocommerce-product-gallery__wrapper <?php echo esc_attr( $gallery_classes ); ?>">
 			<?php
@@ -130,7 +130,7 @@ wp_enqueue_script( 'imagesloaded' );
 	</div>
 
 	<?php if ( $attachment_ids && woodmart_is_product_thumb_enabled() ): ?>
-		<div class="<?php if ( $thums_position == 'left' && ! $is_quick_view ): ?>col-lg-2 order-lg-first<?php else: ?>col-12<?php endif ?>">
+		<div class="<?php if ( $thums_position == 'left' && ! $is_quick_view ): ?>col-lg-12 order-lg-first<?php else: ?>col-12<?php endif ?>">
 			<div class="<?php if ( $thums_position == 'bottom' ) echo "owl-items-lg-4 owl-items-md-3 owl-carousel"; ?> thumbnails owl-items-sm-3 owl-items-xs-3"></div>
 		</div>
 	<?php endif; ?>

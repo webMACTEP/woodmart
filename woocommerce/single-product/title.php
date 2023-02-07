@@ -24,4 +24,6 @@ $is_quick_view = woodmart_loop_prop( 'is_quick_view' );
 
 ?>
 
-<h1 itemprop="name" class="product_title wd-entities-title"><?php if( $is_quick_view ): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php echo get_the_title(); ?><?php if( $is_quick_view ): ?></a><?php endif; ?></h1>
+<h1 itemprop="name" class="product_title wd-entities-title"><?php if( $is_quick_view ): ?>
+	<a href="<?php the_permalink(); ?>"><?php endif; ?><?php echo get_the_title(); ?>
+	<?php if( $is_quick_view ): ?></a><?php endif; ?></h1>
