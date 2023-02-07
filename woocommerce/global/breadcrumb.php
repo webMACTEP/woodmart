@@ -35,9 +35,9 @@ if ( ! empty( $breadcrumb ) ) {
 		if ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key + 1 ) {
 			echo '<a href="' . esc_url( $crumb[1] ) . '" class="breadcrumb-link ' . $class . '">' . esc_html( $crumb[0] ) . '</a>';
 		} else {
-			echo '<span class="breadcrumb-last"> ';
-			echo esc_html( $crumb[0] );
-			echo '</span>';
+			// echo '<span class="breadcrumb-last"> ';
+			// echo esc_html( $crumb[0] );
+			// echo '</span>';
 		}
 
 		echo wp_kses_post( $after );

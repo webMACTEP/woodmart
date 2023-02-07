@@ -558,4 +558,8 @@ p.form-row-wide {
   padding-bottom: 0 !important;
   border: none !important;
 }
+
+.woocommerce-breadcrumb a:last-child:after {
+  display: none;
+}
 /*# sourceMappingURL=mystyle.css.map */
