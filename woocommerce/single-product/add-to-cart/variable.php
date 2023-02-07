@@ -61,7 +61,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
 						</td>
 						<td class="value <?php //if (!empty($swatches)) : 
 												?>with-swatches<?php //endif; 
-																												?>">
+																	?>">
 							<?php
 							//if (!empty($swatches)) : 
 							?>
