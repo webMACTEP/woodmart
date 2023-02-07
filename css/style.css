@@ -1,0 +1,51 @@
+.seventeen {
+  width: 70%;
+}
+
+.seventeen label:first-child {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.seventeen .input-radio {
+  display: block !important;
+}
+
+.seventeen label:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #D9D9D9;
+}
+
+.three {
+  width: auto !important;
+}
+
+.woocommerce-billing-fields__field-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+p.form-row-wide {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
