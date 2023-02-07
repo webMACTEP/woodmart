@@ -147,8 +147,8 @@
 			right: 7px;
 		}
 
-		
-		
+
+
 
 		.product-image-summary .variations {
 			margin-bottom: 15px !important;
@@ -582,7 +582,7 @@
 			}
 		}
 	</style>
-	
+
 	<link rel="stylesheet" href="/wp-content/themes/woodmart/css/mystyle.css?=17">
 </head>
 <?php
@@ -605,7 +605,7 @@ $is_discounted = isset($_GET['discounted']) ? 1 : 0;
 			<!-- HEADER -->
 			<?php if (!function_exists('elementor_theme_do_location') || !elementor_theme_do_location('header')) : ?>
 				<header <?php woodmart_get_header_classes(); // location: inc/functions.php 
-						?>>
+							?>>
 					<?php whb_generate_header(); ?>
 				</header><!--END MAIN HEADER-->
 			<?php endif ?>
