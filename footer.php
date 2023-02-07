@@ -210,4 +210,3 @@ if (woodmart_get_opt('collapse_footer_widgets')) {
 </body>
 
 </html>
-<!-- я не дурак я дурка -->
