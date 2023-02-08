@@ -46,7 +46,26 @@ if (comments_open()) {
 
 if (!empty($product_tabs)) : ?>
 
-	<!-- <div class="woocommerce-tabs wc-tabs-wrapper tabs-layout-<?php echo esc_attr($tabs_layout); ?>">
+
+	<div class="art-block">
+
+		<div class="right">
+			<div class="art-block-column">
+				<a href="https://artigiani.boutique/"><img src="https://www.intefra.ru/wp-content/uploads/2022/10/art3.jpg" /></a>
+			</div>
+			<div class="art-block-column">
+				<h4 class="art-block__title">Товар в наличии</h4>
+				<div class="art-block_link">
+					<a href="https://artigiani.boutique/">www.artigiani.boutique</a>
+				</div>
+				<div class="art-block__address">
+					Санкт-Петербург, Большой проспект ПС 13
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="woocommerce-tabs wc-tabs-wrapper tabs-layout-<?php echo esc_attr($tabs_layout); ?>">
 		<ul class="tabs wc-tabs">
 			<?php foreach ($product_tabs as $key => $product_tab) : ?>
 				<li class="<?php echo esc_attr($key); ?>_tab <?php echo $tab_count === 0 ? 'active' : ''; ?>">
@@ -57,7 +76,9 @@ if (!empty($product_tabs)) : ?>
 		</ul>
 		<?php foreach ($product_tabs as $key => $product_tab) : ?>
 			<div class="wd-tab-wrapper<?php echo woodmart_get_old_classes(' woodmart-tab-wrapper'); ?>">
-				<a href="#tab-<?php echo esc_attr($key); ?>" class="wd-accordion-title<?php echo woodmart_get_old_classes(' woodmart-accordion-title'); ?> tab-title-<?php echo esc_attr($key); ?> <?php echo $content_count === 0 ? 'active' : ''; ?>"><?php echo apply_filters('woocommerce_product_' . $key . '_tab_title', esc_html($product_tab['title']), $key); ?></a>
+				<a href="#tab-<?php echo esc_attr($key); ?>" class="wd-accordion-title<?php echo woodmart_get_old_classes(' woodmart-accordion-title'); ?> tab-title-<?php echo esc_attr($key); ?> <?php echo $content_count === 0 ? 'active' : ''; ?>">
+					<?php echo apply_filters('woocommerce_product_' . $key . '_tab_title', esc_html($product_tab['title']), $key); ?>
+				</a>
 				<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr($key); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr($key); ?>">
 					<div class="wc-tab-inner 
 					<?php
@@ -75,24 +96,6 @@ if (!empty($product_tabs)) : ?>
 			<?php $content_count++; ?>
 		<?php endforeach; ?>
 		<?php do_action('woocommerce_product_after_tabs'); ?>
-	</div> -->
-	<div class="art-block">
-		
-		<div class="right">
-			<div class="art-block-column">
-				<a href="https://artigiani.boutique/"><img src="https://www.intefra.ru/wp-content/uploads/2022/10/art3.jpg" /></a>
-			</div>
-			<div class="art-block-column">
-				<h4 class="art-block__title">Товар в наличии</h4>
-				<div class="art-block_link">
-					<a href="https://artigiani.boutique/">www.artigiani.boutique</a>
-				</div>
-				<div class="art-block__address">
-					Санкт-Петербург, Большой проспект ПС 13
-				</div>
-			</div>
-		</div>
-
 	</div>
 
 <?php endif; ?>

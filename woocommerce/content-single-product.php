@@ -161,9 +161,9 @@ if ($full_height_sidebar && $page_layout != 'full-width') {
 							do_action('woocommerce_single_product_summary');
 							?>
 							<div class="rel">
-							<div class="quick-buy">Быстрый заказ</div> 
+								<div class="quick-buy">Быстрый заказ</div>
 							</div>
-							 
+
 						</div>
 						<div class="woocommerce-product-details">
 							<?php
@@ -235,32 +235,42 @@ if ($full_height_sidebar && $page_layout != 'full-width') {
 <?php if ($full_height_sidebar && $page_layout != 'full-width') echo '</div></div>'; ?>
 
 <!-- Modal -->
+
 <div id="quick-buy-modal">
-	<div onclick="$(this).parent().hide()" class="quick-buy-modal__close"></div>
-	<div class="quick-buy-modal__title">Быстрый заказ</div>
-	<div class="quick-buy-modal-box row">
-		<div class="quick-buy-product row col-lg-7">
-			<div class="quick-buy-product-img col-lg-6">
-				Фото
+	<div class="shadow">
+		<div onclick="$(this).parent().hide()" class="quick-buy-modal__close"></div>
+		
+		<div class="quick-buy-modal-box row">
+			<div class="quick-buy-product row col-lg-7">
+				<div class="quick-buy-product-img col-lg-6">
+					Фото
+				</div>
+				<div class="quick-buy-product-description col-lg-6">
+					<p class="quick-buy-product__name">Название</p>
+					<p class="quick-buy-product__price">Цена</p>
+					<p class="quick-buy-product__size" style="display: block !important;">
+					<input type="text" name="size">
+				</p>
+				</div>
 			</div>
-			<div class="quick-buy-product-description col-lg-6">
-				<p class="quick-buy-product__name">Название</p>
-				<p class="quick-buy-product__price">Цена</p>
-				<p class="quick-buy-product__size">Размер: <span>0</span></p>
-			</div>
-		</div>
-		<div class="col-lg-5">
-			<div class="quick-buy-formbox">
-				<form id="quick-buy-form" action="" method="POST">
-					<input class="quick-buy-formbox__intext" type="text" placeholder="Имя" name="billing_first_name" autocomplete="given-name">
-					<input class="quick-buy-formbox__intext" type="tel" placeholder="Телефон" name="billing_phone" autocomplete="tel">
-					<input class="quick-buy-formbox__size" type="hidden" name="size">
-					<button type="submit" name="quick-buy" class="quick-buy-formbox__btn single_add_to_cart_button">Заказать</button>
-				</form>
+			<div class="col-lg-5">
+			<div class="quick-buy-modal__title">Быстрый заказ</div>
+				<div class="quick-buy-formbox">
+					<form id="quick-buy-form" action="" method="POST">
+						<input class="quick-buy-formbox__intext" type="text" placeholder="Имя" name="billing_first_name" autocomplete="given-name">
+						<input class="quick-buy-formbox__intext" type="tel" placeholder="Телефон" name="billing_phone" autocomplete="tel">
+						<input class="quick-buy-formbox__size" type="hidden" name="size">
+						<button type="submit" name="quick-buy" class="quick-buy-formbox__btn single_add_to_cart_button">КУПИТЬ</button>
+						<span class="politic">Завершая оформление заказа, я подтверждаю ознакомление с <a href="/dostavka/">указанными условиями</a></span>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
+
 </div>
+
+
 <!-- Modal-End -->
 <script type="text/javascript">
 	$('#quick-buy-form').submit(function(e) {
